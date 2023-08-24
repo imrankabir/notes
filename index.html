@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0, zoom=false">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>Let's Chat</title>
+</head>
+<body>
+    <iframe src="https://i-notes-4da914409ed5.herokuapp.com" frameborder="0" id="iframe"></iframe>
+    <script>
+        const setDimensions = event => {
+            const iframe = document.querySelector('#iframe');
+            iframe.width = (window.innerWidth - 15) + 'px';
+            iframe.height = (window.innerHeight - 25) + 'px';
+        }
+        setDimensions();
+        window.onresize = event => setDimensions();
+    </script>
+</body>
+</html>
