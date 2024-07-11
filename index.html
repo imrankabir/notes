@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
     <title>Your Notes | Everywhere</title>
-    <style type="text/css">        
-        *,
-        *::after,
-        *::before {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <style type="text/css">
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <iframe src="https://initially-sweet-shrimp.ngrok-free.app" frameborder="0" id="iframe"></iframe>
     <script>
-        const setDimensions = event => {
-            const iframe = document.querySelector('#iframe');
-            iframe.width = window.innerWidth + 'px';
-            // iframe.height = window.innerHeight + 'px';
-            // iframe.width = (window.innerWidth - 15) + 'px';
-            iframe.height = (window.innerHeight - 5) + 'px';
-        }
-        setDimensions();
-        window.onresize = event => setDimensions();
+      const setDimensions = (event) => {
+        const iframe = document.querySelector("#iframe");
+        iframe.width = window.innerWidth + "px";
+        // iframe.height = window.innerHeight + 'px';
+        // iframe.width = (window.innerWidth - 15) + 'px';
+        iframe.height = window.innerHeight - 5 + "px";
+      };
+      setDimensions();
+      window.onresize = (event) => setDimensions();
     </script>
-</body>
+  </body>
 </html>
