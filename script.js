@@ -2,13 +2,15 @@ const app = 'Notes';
 const VISITS_KEY = 'notes-visits';
 
 const setDimensions = e => {
-const iframe = document.querySelector("#iframe");
-        iframe.width = window.innerWidth + "px";
-        // iframe.height = window.innerHeight + 'px';
-        // iframe.width = (window.innerWidth - 15) + 'px';
-        iframe.height = window.innerHeight - 5 + "px";
+    const iframe = document.querySelector("#iframe");
+    iframe.width = window.innerWidth + "px";
+    // iframe.height = window.innerHeight + 'px';
+    // iframe.width = (window.innerWidth - 15) + 'px';
+    iframe.height = window.innerHeight - 5 + "px";
 };
+
 setDimensions();
+
 window.onresize = e => setDimensions();
 
 const padTwoDigits = num => num.toString().padStart(2, "0");
@@ -46,6 +48,7 @@ async function trackVisitor() {
     let visits = JSON.parse(localStorage.getItem(VISITS_KEY)) || [];
     visits.push({ip, time, app});
     localStorage.setItem(VISITS_KEY, JSON.stringify(visits));
+    persistVisits();
 }
 
 async function persistVisits() {
@@ -66,4 +69,3 @@ async function persistVisits() {
 }
 
 trackVisitor();
-persistVisits();
