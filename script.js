@@ -13,4 +13,4 @@ setDimensions();
 
 window.onresize = e => setDimensions();
 
-trackVisitor();
+// trackVisitor();
